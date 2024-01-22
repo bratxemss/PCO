@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "pcobserver"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wheel = "^0.40.0"
+frozendict = "^2.3.8"
+wrapt = "^1.15.0"
+aiopg = "^1.4.0"
+peewee = "^3.16.2"
+peewee-aio = "^1.5.6"
+psycopg2-binary = "^2.9.6"
+aiosqlite = "^0.19.0"
+pyrogram = "^2.0.106"
+tgcrypto = "^1.2.5"
+pillow = "^9.5.0"
+modconfig = "^1.2.1"
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+pytest-env = "^0.8.2"
+mixer = "^7.2.2"
+uuid = "^1.30"
+sockio = "^0.15.0"
+customtkinter = "^5.2.0"
+pyxdg = "^0.28"
+psutil = "^5.9.5"
+sound = "^0.1.0"
+pycaw = "^20230407"
+pulsectl = "^23.5.2"
+pywin32 = {version = "^306", platform = "windows"}
+cx-freeze = "^6.15.12"
+
+[tool.pytest.ini_options]
+addopts = "-xslv"
+python_files = "test*.py"
+asyncio_mode = "auto"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::pytest.PytestUnraisableExceptionWarning"
+]
+env = [
+    "ENV=tests"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
